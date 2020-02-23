@@ -1,0 +1,44 @@
+.Setting {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin: 20px;
+}
+
+.Input {
+    display: none;
+}
+
+.ProfileImage {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    width: 80px;
+    height: 80px;
+    max-width: 80px;
+    max-height: 80px;
+    background-image: url('../../../assets/images/avatar-placeholder.png');
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    background-position: center; 
+    position: relative;
+}
+
+.ProfileImage img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.ProfileImage:hover {
+    content: 'Add profile image';
+    cursor: pointer;
+    opacity: 0.5;
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    background-position: center; 
+    position: relative;
+    transition: all 0.3s ease-out;
+}

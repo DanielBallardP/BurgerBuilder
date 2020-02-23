@@ -1,0 +1,45 @@
+.Divider{
+    width:20px;
+    height:auto;
+    display:inline-block;
+}
+
+.OrderSummaryHeader {
+    width: 100%;
+    opacity: 0.7;
+    color: rgb(255, 255, 255);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-inline: 8px;
+    font-weight: 300;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Blue {
+    background-color:  rgb(106, 159, 209);
+}
+
+.Gray {
+    background-color: rgb(170, 170, 170);
+}
+
+.OrderSummary {
+    display: inline-block;
+    width: 100%;
+    align-items: center;
+}
+
+.ImageIcon {
+    height: 100%;
+}
+
+.IconRoot {
+    align-items: center;
+}
+
+.OrderSummaryButtons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}

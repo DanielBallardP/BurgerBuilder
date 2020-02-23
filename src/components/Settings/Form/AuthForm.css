@@ -1,0 +1,23 @@
+.Setting {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+
+.Title {
+    margin-left: 10px;
+}
+
+.SubmitButton {
+    cursor: pointer;
+    color: white;
+    background-color: red;
+    margin-top: 16px;
+    padding: 15px 30px;
+    margin-left: 10px;
+}
+
+.SubmitButton:hover {
+    background-color: red;
+}

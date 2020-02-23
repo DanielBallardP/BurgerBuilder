@@ -1,0 +1,49 @@
+.Avatar {
+    width: 25px;
+    height: 25px;
+    max-width: 25px;
+    max-height: 25px;
+}
+
+.Account {
+    margin: 10px 0;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    color: white;
+}
+
+.Account:hover
+.Account:active
+.Account.active {
+    color: rgb(85, 85, 85);
+}
+
+@media (min-width: 500px) {
+
+    .Account {
+        margin: 10px 0;
+        box-sizing: border-box;
+        display: flex;
+        height: 100%;
+        width: auto;
+        align-items: center;
+        color: white;
+        padding: 16px 5px;
+    }
+    
+    .Blue:hover {
+        background-color: rgb(89, 151, 209);
+        color: rgb(49, 49, 49);
+    }
+    .Gray:hover {
+        background-color: rgb(136, 136, 136);
+        color: rgb(49, 49, 49);
+    }
+    .Account:active,
+    .Account.active {
+        color: rgb(49, 49, 49);
+    }
+}

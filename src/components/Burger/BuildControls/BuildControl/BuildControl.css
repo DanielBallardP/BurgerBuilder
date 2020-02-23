@@ -1,0 +1,104 @@
+.BuildControl {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.BuildControlElement {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(153, 153, 153);
+    border-radius: 25px;
+    margin: 5px 0;
+    padding-left: 10px;
+}
+
+.BuildControlElement:hover,
+.BuildControlElement:active {
+    cursor: pointer;
+    background-color: rgb(226, 226, 226);
+    border: 1px solid  rgb(255, 255, 255);
+    transition: transform 0.3s ease-out;
+}
+
+.BuildControl button {
+    display: block;
+    font: inherit;
+    padding: 5px;
+    margin: 0 5px;
+    height: 48px;
+    width: 40px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: inset;
+}
+
+.BuildControl button:disabled {
+    border: 0px;
+    cursor: default;
+}
+
+.IngredientInfoHeader {
+    opacity: 0.7;
+    color: rgb(255, 255, 255);
+    max-width: 284px;
+    max-height: 18px;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    font-weight: 300;
+}
+
+.Blue {
+    background-color:  rgb(106, 159, 209);
+}
+
+.Gray {
+    background-color: rgb(170, 170, 170);
+}
+
+.IngredientPhoto {
+    width: 300px;
+    height: 80px;
+}
+
+.IngredientInfo {
+    background-color: rgb(255, 255, 255);
+    color: rgb(160, 160, 160);
+    max-width: 284px;
+    max-height: 300px;
+    padding: 8px;
+    font-weight: 300;
+    font-size: smaller;
+}
+
+.Label {
+    padding: 10px;
+    width: 80px;
+}
+
+.ImageIcon {
+    height: 100%;
+}
+
+.IconRoot {
+    align-items: center;
+}
+
+.BuildControl .Less:hover, .BuildControl .Less:active {  
+    background-color: rgb(231, 146, 146);
+    border: 1px solid  rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    transition: transform 0.3s ease-out;
+}
+
+.BuildControl .More:hover,.BuildControl .More:active {
+    background-color: rgb(160, 229, 171);
+    border: 1px solid  rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    transition: transform 0.3s ease-out;
+}
