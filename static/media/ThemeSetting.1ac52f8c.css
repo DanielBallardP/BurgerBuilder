@@ -1,0 +1,10 @@
+.Setting {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.FormControl {
+    min-width: 100px;
+}

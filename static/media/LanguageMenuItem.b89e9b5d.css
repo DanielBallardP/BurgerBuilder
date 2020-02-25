@@ -1,0 +1,54 @@
+.LanguageFlag {
+    width: 25px;
+    height: 25px;
+    max-width: 25px;
+    max-height: 25px;
+}
+
+.Language {
+    margin: 2px 0;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 25px;
+    max-height: 25px;
+    align-self: start;
+    cursor: pointer;
+    color: white;
+}
+
+.Language:hover
+.Language:active
+.Language.active {
+    color: rgb(85, 85, 85);
+}
+
+@media (min-width: 500px) {
+
+    .Language {
+        margin: 10px 0;
+        box-sizing: border-box;
+        display: flex;
+        height: 100%;
+        width: auto;
+        max-width: 300px;
+        align-self: center;
+        align-items: center;
+        color: white;
+        padding: 16px 5px;
+    }
+    
+    .Blue:hover {
+        background-color: rgb(89, 151, 209);
+        color: rgb(49, 49, 49);
+    }
+    .Gray:hover {
+        background-color: rgb(136, 136, 136);
+        color: rgb(49, 49, 49);
+    }
+    .Language:active,
+    .Language.active {
+        color: rgb(49, 49, 49);
+    }
+}
