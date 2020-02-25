@@ -48,5 +48,9 @@
     "enterEmailAndPasswordToConfirmAccountDeletion": "Bitte geben Sie Email Adresse und Passwort ein um die Kontolöschung zu bestätigen",
     "changePassword": "Passwort ändern",
     "deleteAccount": "Konto löschen",
-    "confirm": "Bestätigen"
+    "confirm": "Bestätigen",
+    "orderDetails": "Bestellübersicht",
+    "proceed": "Fortfahren",
+    "cancel": "Abbrechen",
+    "pc(s)": "Stk."
 }

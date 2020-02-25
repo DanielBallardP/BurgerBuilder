@@ -48,5 +48,9 @@
     "enterEmailAndPasswordToConfirmAccountDeletion": "Please enter email and password to confirm account deletion",
     "changePassword": "Change password",
     "deleteAccount": "Delete account",
-    "confirm": "Confirm"
+    "confirm": "Confirm",
+    "orderDetails": "Order details",
+    "proceed": "Proceed",
+    "cancel": "Cancel",
+    "pc(s)": "pc(s)"
 }
