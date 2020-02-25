@@ -18,7 +18,7 @@ i18n
         loadPath: '/BurgerBuilder/locales/{{lng}}/{{ns}}.json'
     },
     react: {
-        useSuspense: false
+        useSuspense: true
     }
 });
 

@@ -31,7 +31,7 @@ const Auth = React.lazy(() => {
 const app = props =>  {
 
   const loggedIn = useSelector(state => state.auth.idToken != null);
-  const languageCode = useSelector(state => state.settings.settings.languageCode);
+  const languageCode = useSelector(state => state.settings.languageCode);
 
   const dispatch = useDispatch();
 
@@ -69,10 +69,10 @@ const app = props =>  {
         restoreTokens(tokens);    
         loadSettings(tokens.idToken, tokens.userId);    
     }
-    restoreLanguage();
     restoreCurrency();
     restoreTheme();
     restoreProfileImage();
+    restoreLanguage();
   }, [restoreTokens, retrieveTokens, loadSettings, restoreCurrency, restoreTheme, restoreProfileImage])
 
     let routes = (
@@ -95,19 +95,19 @@ const app = props =>  {
       );
     }
     return (
-      <div>
-        <BrowserRouter basename='/BurgerBuilder/'>
-          <LastLocationProvider>
-            <Layout>
-              <Switch>
-                <Suspense fallback={<Spinner />}>
+      <Fragment>
+        <Suspense fallback={<Spinner />}>
+          <BrowserRouter basename='/BurgerBuilder/'>
+            <LastLocationProvider>
+              <Layout>
+                <Switch>
                   {routes}
-                </Suspense>
-              </Switch>
-            </Layout>
-          </LastLocationProvider>
-        </BrowserRouter>
-      </div>
+                </Switch>
+              </Layout>
+            </LastLocationProvider>
+          </BrowserRouter>
+        </Suspense>
+      </Fragment>
     );
 };
 

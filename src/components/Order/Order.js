@@ -64,7 +64,7 @@ const order = props => {
                                     <img className={classes.imageIcon} alt='icon' src={ingredientIcons[ing.name]}/>
                                 </Icon>
                             </ListItemIcon>
-                            <ListItemText primary={t(ing.name)} secondary={`${ing.amount} pc(s)`}/>
+                            <ListItemText primary={t(ing.name)} secondary={`${ing.amount} ${t('pc(s)', 'pc(s)')}`}/>
                         </ListItem>
                     </div>
             );

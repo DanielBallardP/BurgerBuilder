@@ -10,13 +10,13 @@ const withErrorHandler = (WrappedComponent, axios) => {
 
         return (
             <Fragment>
-                    <Modal show={error} closeModal={resetErrorHandler}>
+                <Modal show={error} closeModal={resetErrorHandler}>
                     {error ? error.message : null}
-                    </Modal>
-                    <WrappedComponent {...props} />
+                </Modal>
+                <WrappedComponent {...props} />
             </Fragment>
         );
-    }
-}
+    };
+};
 
 export default withErrorHandler;

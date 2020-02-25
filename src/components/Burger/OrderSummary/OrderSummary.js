@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import {useSelector} from 'react-redux';
+import {useTranslation} from 'react-i18next';
 
 import classes from './OrderSummary.css';
 
@@ -23,6 +24,8 @@ const orderSummary = props => {
 
     const cssClass = [classes.OrderSummaryHeader, classes[theme]];
 
+    const {t} = useTranslation();
+
     const ingredientIcons = {
         salad: saladIcon,
         bacon: baconIcon,
@@ -38,34 +41,34 @@ const orderSummary = props => {
                                                     <img className={classes.imageIcon} alt='icon' src={ingredientIcons[ing]}/>
                                                 </Icon>
                                             </ListItemIcon>
-                                            <ListItemText primary={`${ing.charAt(0).toUpperCase() + ing.slice(1)}`} secondary={`${props.ingredients[ing]} pc(s)`}/>
+                                            <ListItemText primary={t(ing)} secondary={`${props.ingredients[ing]} ${t('pc(s)', '(pc)s')}`}/>
                                         </ListItem> : null
         );
     });
 
     return (
-            <div>
+            <Fragment>
                 <div className={cssClass.join(' ')}>
-                    Order details
+                    {t('orderDetails', 'Order details')}
                 </div>
                 <div className={classes.OrderSummary}>
                     <List dense={true}>
                         {ingredientSummary}
                     </List>
                     <Typography>
-                        Total price: {parseFloat(props.totalPrice).toFixed(2)} {currency}
+                        {t('totalPrice', 'Total price')}: {parseFloat(props.totalPrice).toFixed(2)} {currency}
                     </Typography>
                     <div className={classes.OrderSummaryButtons}>
                         <Button onClick={props.checkOut} variant="contained" disableElevation>
-                            Checkout
+                            {t('checkout', 'Checkout')}
                         </Button>
                         <div className={classes.Divider} />
                         <Button onClick={props.cancelOrder} variant="contained" disableElevation>
-                            Cancel
+                            {t('cancel', 'Cancel')}
                         </Button>
                     </div>
                 </div>
-            </div>
+            </Fragment>
     );
 };
 
