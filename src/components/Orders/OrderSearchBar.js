@@ -30,8 +30,8 @@ const OrderSearchBar = props => {
 
     const dispatch = useDispatch();
 
-    const setOrderSorting = useCallback(sortBy => dispatch(actions.setOrderSorting(sortBy)), []);
-    const setOrderDate = useCallback(orderSearchDate => dispatch(actions.setOrderSearchDate(orderSearchDate)), []);
+    const setOrderSorting = useCallback(sortBy => dispatch(actions.setOrderSorting(sortBy)), [dispatch]);
+    const setOrderDate = useCallback(orderSearchDate => dispatch(actions.setOrderSearchDate(orderSearchDate)), [dispatch]);
 
     let attachedClasses = [classes.SearchBar, classes.Close];
     

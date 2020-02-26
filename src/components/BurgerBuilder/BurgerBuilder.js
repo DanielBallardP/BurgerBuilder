@@ -35,15 +35,15 @@ export const BurgerBuilder = props => {
 
     const addIngredient = ingredient => dispatch(actions.addIngredient(ingredient));
     const removeIngredient = ingredient => dispatch(actions.removeIngredient(ingredient));
-    const initIngredients = useCallback(() => dispatch(actions.initIngredients()),[]);
-    const restoreIngredients = useCallback(ingredients => dispatch(actions.restoreIngredients(ingredients)), []);
+    const initIngredients = useCallback(() => dispatch(actions.initIngredients()),[dispatch]);
+    const restoreIngredients = useCallback(ingredients => dispatch(actions.restoreIngredients(ingredients)), [dispatch]);
     const initOrder = () => dispatch(actions.initOrder());
     const setAuthRedirectPath = path => dispatch(actions.setAuthRedirectPath(path));
 
-    const performStepReset = () => dispatch(actions.performStepReset());
-    const displayBurgerStepper = useCallback(() => dispatch(actions.displayBurgerStepper()), []);
-    const restoreCurrency  = useCallback(() => dispatch(actions.restoreCurrency()), []);
-    const restoreBurgerType = useCallback(() => dispatch(actions.restoreBurgerType()), []);
+    const performStepReset = useCallback(() => dispatch(actions.performStepReset()), [dispatch]);
+    const displayBurgerStepper = useCallback(() => dispatch(actions.displayBurgerStepper()), [dispatch]);
+    const restoreCurrency  = useCallback(() => dispatch(actions.restoreCurrency()), [dispatch]);
+    const restoreBurgerType = useCallback(() => dispatch(actions.restoreBurgerType()), [dispatch]);
 
     const retrieveIngredients = () => {
         const salad = localStorage.getItem('salad');

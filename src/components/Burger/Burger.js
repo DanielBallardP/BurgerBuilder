@@ -34,7 +34,7 @@ const Burger = props => {
     
     const dispatch = useDispatch();
     
-    const changeBurgerType = useCallback(burgerType => dispatch(actions.changeBurgerType(burgerType))); 
+    const changeBurgerType = useCallback(burgerType => dispatch(actions.changeBurgerType(burgerType)), [dispatch]); 
 
     const history = useHistory();
 

@@ -70,8 +70,8 @@ const Auth = props => {
     const dispatch = useDispatch();
 
     const authenticate = (signForm, signUp) => dispatch(actions.authenticate(signForm.email, signForm.password, signUp));
-    const setAuthRedirectPath = () => dispatch(actions.setAuthRedirectPath('/'));
-    const hideBurgerStepper = useCallback(() => dispatch(actions.hideBurgerStepper()), []);
+    const setAuthRedirectPath = useCallback(() => dispatch(actions.setAuthRedirectPath('/')), [dispatch]);
+    const hideBurgerStepper = useCallback(() => dispatch(actions.hideBurgerStepper()), [dispatch]);
 
     useEffect(() => {
         hideBurgerStepper();
@@ -83,7 +83,7 @@ const Auth = props => {
         if (error !== null) {
             setAuthenticationError(true);
         }
-    }, [error])
+    }, [hideBurgerStepper, building, setAuthRedirectPath, error, setAuthenticationError])
 
     const signInHandler = event => {
         event.preventDefault();

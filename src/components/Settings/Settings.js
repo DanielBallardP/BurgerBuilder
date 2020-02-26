@@ -44,18 +44,18 @@ const Settings = props => {
       sendSettings({...addedSettings, userId: userId}, token);
     };
 
-    const checkOriginProfileMenu = () => {
+    const checkOriginProfileMenu = useCallback(() => {
       if (history.location.search === '?show=profile') {
         setExpanded('profile');
       } else if (history.location.search === '?show=account') {
         setExpanded('account');
       }
-    }
+    }, [history.location.search]);
 
     useEffect(() => {
         hideBurgerStepper();
         checkOriginProfileMenu();
-    }, []);
+    }, [hideBurgerStepper, checkOriginProfileMenu]);
 
     return (
         <div className={classes.Settings}>

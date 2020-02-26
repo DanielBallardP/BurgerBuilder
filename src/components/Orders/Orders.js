@@ -21,8 +21,8 @@ const Orders = props => {
     const userId = useSelector(state => state.auth.userId);
 
     const dispatch = useDispatch();
-    const loadOrders = useCallback((token, userId, orderSearchDate, orderSorting) => dispatch(actions.loadOrders(token, userId, orderSearchDate, orderSorting)), []);
-    const hideBurgerStepper = useCallback(() => dispatch(actions.hideBurgerStepper()), []);
+    const loadOrders = useCallback((token, userId, orderSearchDate, orderSorting) => dispatch(actions.loadOrders(token, userId, orderSearchDate, orderSorting)), [dispatch]);
+    const hideBurgerStepper = useCallback(() => dispatch(actions.hideBurgerStepper()), [dispatch]);
 
     useEffect(() => {
         hideBurgerStepper();
