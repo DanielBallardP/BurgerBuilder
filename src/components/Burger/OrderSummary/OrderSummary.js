@@ -17,7 +17,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Icon from '@material-ui/core/Icon';
 import Typography from '@material-ui/core/Typography';
 
-const orderSummary = props => {
+const OrderSummary = props => {
 
     const theme = useSelector(state => state.settings.settings.theme);
     const currency = useSelector(state => state.settings.settings.currency);
@@ -72,4 +72,4 @@ const orderSummary = props => {
     );
 };
 
-export default orderSummary;
+export default OrderSummary;

@@ -10,13 +10,13 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import FormControl from '@material-ui/core/FormControl';
 
-const currencySetting = props => {
+const CurrencySetting = props => {
 
     const currency = useSelector(state => state.settings.settings.currency);
 
     const dispatch = useDispatch();
 
-    const changeCurrency = useCallback(currency => dispatch(actions.changeCurrency(currency)), []);
+    const changeCurrency = useCallback(currency => dispatch(actions.changeCurrency(currency)), [dispatch]);
 
     const {t} = useTranslation();
 
@@ -40,4 +40,4 @@ const currencySetting = props => {
     );
 };
 
-export default currencySetting;
+export default CurrencySetting;

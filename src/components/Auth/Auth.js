@@ -18,7 +18,7 @@ import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 
-const auth = props => {
+const Auth = props => {
     const {t} = useTranslation();
 
     const [signForm, setSignForm] = useState({
@@ -212,4 +212,4 @@ const auth = props => {
     );
 };
 
-export default auth;
+export default Auth;

@@ -5,7 +5,7 @@ import PasswordChange from './PasswordChange';
 
 import classes from './AccountSettings.css';
 
-const accountSettings = props => {
+const AccountSettings = props => {
 
     return (
         <div className={classes.Setting}>
@@ -19,4 +19,4 @@ const accountSettings = props => {
     );
 };
 
-export default accountSettings;
+export default AccountSettings;

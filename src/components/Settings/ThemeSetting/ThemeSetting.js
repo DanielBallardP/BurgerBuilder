@@ -10,13 +10,13 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import FormControl from '@material-ui/core/FormControl';
 
-const themeSetting = props => {
+const ThemeSetting = props => {
 
     const theme = useSelector(state => state.settings.settings.theme);
 
     const dispatch = useDispatch();
 
-    const changeTheme = useCallback(theme => dispatch(actions.changeTheme(theme)), []);
+    const changeTheme = useCallback(theme => dispatch(actions.changeTheme(theme)), [dispatch]);
 
     const {t} = useTranslation();
 
@@ -40,4 +40,4 @@ const themeSetting = props => {
     );
 };
 
-export default themeSetting;
+export default ThemeSetting;

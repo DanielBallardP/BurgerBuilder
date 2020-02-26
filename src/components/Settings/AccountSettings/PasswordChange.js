@@ -14,7 +14,7 @@ import Button from '@material-ui/core/Button';
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 
-const passwordChange = props => {
+const PasswordChange = props => {
     const {t} = useTranslation();
 
     const [passwordForm, setPasswordForm] = useState({
@@ -43,8 +43,8 @@ const passwordChange = props => {
 
     const dispatch = useDispatch();
 
-    const authenticate = useCallback((idToken, formData) => dispatch(actions.authenticate(formData.email, formData.password, false)), []);
-    const changeAccountPassword = useCallback((idToken, password) => dispatch(actions.changePassword(idToken, password)));
+    const authenticate = useCallback((idToken, formData) => dispatch(actions.authenticate(formData.email, formData.password, false)), [dispatch]);
+    const changeAccountPassword = useCallback((idToken, password) => dispatch(actions.changePassword(idToken, password)), [dispatch]);
 
     useEffect(() => {
         if (error) {
@@ -140,4 +140,4 @@ const passwordChange = props => {
     );
 };
 
-export default passwordChange;
+export default PasswordChange;

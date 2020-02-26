@@ -4,7 +4,7 @@ import {useTranslation} from 'react-i18next';
 
 import classes from './InfoBar.css';
 
-const infoBar = props => {
+const InfoBar = props => {
     const currency = useSelector(state => state.settings.settings.currency);
     const theme = useSelector(state => state.settings.settings.theme);
     const cssClass = [classes.InfoBar, classes[theme]];
@@ -20,4 +20,4 @@ const infoBar = props => {
     );
 };
 
-export default infoBar;
+export default InfoBar;

@@ -15,7 +15,7 @@ import Popper from '@material-ui/core/Popper';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 
-const accountMenu = props => {
+const AccountMenu = props => {
   const theme = useSelector(state => state.settings.settings.theme);
   const cssClass = [classes.Account, classes[theme]];
 
@@ -102,4 +102,4 @@ const accountMenu = props => {
     );
 }
 
-export default memo(accountMenu);
+export default memo(AccountMenu);

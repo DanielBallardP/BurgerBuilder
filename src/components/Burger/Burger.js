@@ -13,7 +13,7 @@ import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import Tooltip from '@material-ui/core/Tooltip';
 
-const burger = props => {
+const Burger = props => {
 
     const burgerTypes = {
         basic: {
@@ -141,4 +141,4 @@ const burger = props => {
     );
 };
 
-export default burger;
+export default Burger;

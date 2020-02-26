@@ -28,26 +28,26 @@ const Auth = React.lazy(() => {
   return import('./components/Auth/Auth');
 });
 
-const app = props =>  {
+const App = props =>  {
 
   const loggedIn = useSelector(state => state.auth.idToken != null);
   const languageCode = useSelector(state => state.settings.languageCode);
 
   const dispatch = useDispatch();
 
-  const restoreTokens = ({userId, idToken, refreshToken}) => dispatch(actions.restoreTokens(userId, idToken, refreshToken));
-  const restoreCurrency = useCallback(() => dispatch(actions.restoreCurrency()));
-  const restoreTheme = useCallback(() => dispatch(actions.restoreTheme()));
-  const restoreProfileImage = useCallback(() => dispatch(actions.restoreProfileImage()));
+  const restoreTokens = useCallback(({userId, idToken, refreshToken}) => dispatch(actions.restoreTokens(userId, idToken, refreshToken)), [dispatch]);
+  const restoreCurrency = useCallback(() => dispatch(actions.restoreCurrency()), [dispatch]);
+  const restoreTheme = useCallback(() => dispatch(actions.restoreTheme()), [dispatch]);
+  const restoreProfileImage = useCallback(() => dispatch(actions.restoreProfileImage()), [dispatch]);
 
   const restoreLanguage = useCallback(() => {
     dispatch(actions.restoreLanguage());
     if (languageCode) {
       i18n.changeLanguage(languageCode);
     }
-  }, [languageCode]);
+  }, [dispatch, languageCode]);
 
-  const loadSettings = useCallback((idToken, userId) => dispatch(actions.loadSettings(idToken, userId)));
+  const loadSettings = useCallback((idToken, userId) => dispatch(actions.loadSettings(idToken, userId)), [dispatch]);
 
   const retrieveTokens = useCallback(() => {
     const userId = localStorage.getItem('userId');
@@ -73,7 +73,7 @@ const app = props =>  {
     restoreTheme();
     restoreProfileImage();
     restoreLanguage();
-  }, [restoreTokens, retrieveTokens, loadSettings, restoreCurrency, restoreTheme, restoreProfileImage])
+  }, [restoreTokens, retrieveTokens, loadSettings, restoreLanguage, restoreCurrency, restoreTheme, restoreProfileImage])
 
     let routes = (
       <Fragment>
@@ -111,4 +111,4 @@ const app = props =>  {
     );
 };
 
-export default app;
+export default App;

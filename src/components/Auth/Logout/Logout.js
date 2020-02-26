@@ -1,13 +1,13 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useCallback} from 'react';
 import { useDispatch } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
 import * as actions from '../../../store/actions';
 
-const logout = props => {
+const Logout = props => {
 
     const dispatch = useDispatch();
-    const logout = () => dispatch(actions.signOut());
+    const logout = useCallback(() => dispatch(actions.signOut()), [dispatch]);
 
     useEffect(() => {
         logout();
@@ -18,4 +18,4 @@ const logout = props => {
     );
 };
 
-export default logout;
+export default Logout;

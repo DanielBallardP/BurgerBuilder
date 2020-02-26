@@ -11,7 +11,7 @@ import * as actions from '../../store/actions';
 
 import classes from'./Orders.css';
 
-const orders = props => {
+const Orders = props => {
 
     const orders = useSelector(state => state.order.orders);
     const orderSearchDate = useSelector(state => state.order.orderSearchDate);
@@ -27,7 +27,7 @@ const orders = props => {
     useEffect(() => {
         hideBurgerStepper();
         loadOrders(token, userId, orderSearchDate, orderSorting);
-    }, [loadOrders, orderSearchDate, orderSorting])
+    }, [hideBurgerStepper, loadOrders, token, userId, orderSearchDate, orderSorting])
 
     let displayOrders = error ? <p>Orders can't be loaded</p> : ' ';
 
@@ -55,4 +55,4 @@ const orders = props => {
     );
 }
 
-export default withErrorHandler(orders, AxiosInstance);
+export default withErrorHandler(Orders, AxiosInstance);

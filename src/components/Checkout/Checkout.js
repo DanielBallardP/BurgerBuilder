@@ -6,7 +6,7 @@ import CheckoutSummary from '../Order/CheckoutSummary/CheckoutSummary';
 import ContactData from './ContactData/ContactData';
 import * as actions from '../../store/actions';
 
-const checkout = props => {
+const Checkout = props => {
 
     const ingredients = useSelector(state => state.burgerBuilder.ingredients);
     const orderSuccessful = useSelector(state => state.order.orderSuccessful);
@@ -14,13 +14,13 @@ const checkout = props => {
     const history = useHistory();
 
     const dispatch = useDispatch();
-    const performStepNext = () => dispatch(actions.performStepNext());
-    const displayBurgerStepper = useCallback(() => dispatch(actions.displayBurgerStepper()), []);
+    const performStepNext = useCallback(() => dispatch(actions.performStepNext()), [dispatch]);
+    const displayBurgerStepper = useCallback(() => dispatch(actions.displayBurgerStepper()), [dispatch]);
 
     useEffect(() => {
         displayBurgerStepper();
         performStepNext();
-    }, [performStepNext]);
+    }, [displayBurgerStepper, performStepNext]);
 
     const cancelCheckout = () => history.goBack();
 
@@ -42,4 +42,4 @@ const checkout = props => {
     return summary;
 }
 
-export default checkout;
+export default Checkout;

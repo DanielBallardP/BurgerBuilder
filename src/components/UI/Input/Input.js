@@ -5,7 +5,7 @@ import classes from './Input.css';
 import TextField from '@material-ui/core/TextField';
 import Select from '@material-ui/core/Select';
 
-const input = props => {
+const Input = props => {
     let inputElement = null;
     let validationError = null;
     const inputClasses = [classes.InputElement];
@@ -43,4 +43,4 @@ const input = props => {
     );
 }
 
-export default input;
+export default Input;

@@ -12,7 +12,7 @@ import cheeseIcon from '../../../assets/icons/cheese.svg';
 import meatIcon from '../../../assets/icons/meat.svg';
 
 
-const buildControls = props => {
+const BuildControls = props => {
     const {t} = useTranslation();
 
     const controls = [
@@ -49,4 +49,4 @@ const buildControls = props => {
     );
 };
 
-export default buildControls;
+export default BuildControls;

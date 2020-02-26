@@ -7,7 +7,7 @@ import BurgerStepper from '../../components/BurgerBuilder/BurgerStepper';
 
 import classes from './Layout.css'
 
-const layout = props => {
+const Layout = props => {
     const [showSideDrawer, setShowSideDrawer] = useState(false);
 
     const loggedIn = useSelector(state => state.auth.idToken);
@@ -28,4 +28,4 @@ const layout = props => {
         );
 };
 
-export default layout;
+export default Layout;

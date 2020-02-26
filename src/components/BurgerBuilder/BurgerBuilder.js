@@ -18,7 +18,7 @@ import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 
 
-export const burgerBuilder = props => {
+export const BurgerBuilder = props => {
     const [showOrderSummary, setShowOrderSummary] = useState(false);
 
     const [logoutMessage, setLogoutMessage] = useState(null);
@@ -196,4 +196,4 @@ export const burgerBuilder = props => {
     );
 };
 
-export default withErrorHandler(burgerBuilder, AxiosInstance);
+export default withErrorHandler(BurgerBuilder, AxiosInstance);

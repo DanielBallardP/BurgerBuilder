@@ -4,7 +4,7 @@ import Backdrop from '../Backdrop/Backdrop';
 
 import classes from './Modal.css';
 
-const modal = props => {
+const Modal = props => {
         return (
             <Fragment>
                 <Backdrop show={props.show} clicked={props.closeModal}/>
@@ -25,4 +25,4 @@ const areEqual = (prevProps, nextProps) => {
     return prevProps.show === nextProps.show && prevProps.children === nextProps.children;
 }
 
-export default memo(modal, areEqual);
+export default memo(Modal, areEqual);

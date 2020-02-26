@@ -7,7 +7,7 @@ import DrawerToggle from '../SideDrawer/DrawerToggle/DrawerToggle';
 
 import classes from './Toolbar.css';
 
-const toolbar = props => {
+const Toolbar = props => {
     
     const theme = useSelector(state => state.settings.settings.theme);
     const cssClass = [classes.Toolbar, classes[theme]];
@@ -25,4 +25,4 @@ const toolbar = props => {
     );
 };
 
-export default toolbar;
+export default Toolbar;

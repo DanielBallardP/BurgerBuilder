@@ -5,7 +5,7 @@ import classes from './BuildButtons.css';
 
 import Button from '@material-ui/core/Button';
 
-const buildButtons = props => {  
+const BuildButtons = props => {  
     const {t} = useTranslation();
 
     const buttonText = props.loggedIn ? t('orderNow','ORDER NOW') : t('signInToOrder','SIGN IN TO ORDER');
@@ -24,4 +24,4 @@ const buildButtons = props => {
     );
 };
 
-export default buildButtons;
+export default BuildButtons;

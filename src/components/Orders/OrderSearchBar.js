@@ -15,7 +15,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
 
-const orderSearchBar = props => {
+const OrderSearchBar = props => {
 
     const sorting = useSelector(state => state.order.sortBy);
     const orderSearchDate = useSelector(state => state.order.orderSearchDate);
@@ -115,4 +115,4 @@ const orderSearchBar = props => {
     );
 }
 
-export default orderSearchBar;
+export default OrderSearchBar;

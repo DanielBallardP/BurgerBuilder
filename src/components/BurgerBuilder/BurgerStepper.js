@@ -6,21 +6,17 @@ import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 
-function getSteps() {
-  const { t } = useTranslation();
-
-  const selectIngredients = t('selectIngredients', 'Select ingredients');
-  const checkout = t('checkout', 'Checkout');
-  const confirmOrder = t('confirmOrder', 'Confirm order');
-
-  return [selectIngredients, checkout, confirmOrder];
-}
-
-const burgerStepper = props => {
+const BurgerStepper = props => {
     const activeStep = useSelector(state => state.burgerStepper.activeStep);
     const displayBurgerStepper = useSelector(state => state.burgerStepper.display);
 
-    const steps = getSteps();
+    const { t } = useTranslation();
+
+    const selectIngredients = t('selectIngredients', 'Select ingredients');
+    const checkout = t('checkout', 'Checkout');
+    const confirmOrder = t('confirmOrder', 'Confirm order');
+    
+    const steps = [selectIngredients, checkout, confirmOrder];
 
     let burgerStepper = null;
 
@@ -45,4 +41,4 @@ const burgerStepper = props => {
   );
 };
 
-export default burgerStepper;
+export default BurgerStepper;

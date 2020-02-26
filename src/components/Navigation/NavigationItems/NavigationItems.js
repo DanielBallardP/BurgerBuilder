@@ -11,7 +11,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import SettingsIcon from '@material-ui/icons/Settings';
 import Tooltip from '@material-ui/core/Tooltip';
 
-const navigationItems = props => {
+const NavigationItems = props => {
 
     const {t} = useTranslation();
 
@@ -55,4 +55,4 @@ const navigationItems = props => {
     );
 };
 
-export default navigationItems;
+export default NavigationItems;

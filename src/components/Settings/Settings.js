@@ -18,7 +18,7 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Button from '@material-ui/core/Button';
 
-const settings = props => {
+const Settings = props => {
 
     const token = useSelector(state => state.auth.idToken);
     const userId = useSelector(state => state.auth.userId);
@@ -29,8 +29,8 @@ const settings = props => {
 
     const dispatch = useDispatch();
 
-    const hideBurgerStepper = useCallback(() => dispatch(actions.hideBurgerStepper()), []);
-    const sendSettings = useCallback((settings, token) => dispatch(actions.sendSettings(settings, token)));
+    const hideBurgerStepper = useCallback(() => dispatch(actions.hideBurgerStepper()), [dispatch]);
+    const sendSettings = useCallback((settings, token) => dispatch(actions.sendSettings(settings, token)), [dispatch]);
 
     const [expanded, setExpanded] = useState(false);
 
@@ -101,4 +101,4 @@ const settings = props => {
     );
 };
 
-export default settings;
+export default Settings;

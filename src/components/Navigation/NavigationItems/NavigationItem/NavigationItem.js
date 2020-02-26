@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 import classes from './NavigationItem.css';
 
-const navigationItem = props => {
+const NavigationItem = props => {
     const theme = useSelector(state => state.settings.settings.theme);
     const cssClass = [classes.NavigationItem, classes[theme]];
 
@@ -17,4 +17,4 @@ const navigationItem = props => {
     )
 };
 
-export default navigationItem;
+export default NavigationItem;

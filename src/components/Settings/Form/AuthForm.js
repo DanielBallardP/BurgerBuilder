@@ -8,7 +8,7 @@ import classes from './AuthForm.css';
 
 import Button from '@material-ui/core/Button';
 
-const authForm = props => {
+const AuthForm = props => {
     const {t} = useTranslation();
 
     const {formHandler, title} = props;
@@ -116,4 +116,4 @@ const authForm = props => {
     );
 };
 
-export default authForm;
+export default AuthForm;

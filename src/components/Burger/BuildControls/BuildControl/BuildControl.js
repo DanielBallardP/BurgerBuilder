@@ -16,7 +16,7 @@ import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
 import Popover from '@material-ui/core/Popover';
 
-const buildControl = props => {
+const BuildControl = props => {
     const {label, type, price, icon, calories, description} = props;
     const currency = useSelector(state => state.settings.settings.currency);
     const theme = useSelector(state => state.settings.settings.theme);
@@ -98,4 +98,4 @@ const buildControl = props => {
     );
 };
 
-export default buildControl;
+export default BuildControl;

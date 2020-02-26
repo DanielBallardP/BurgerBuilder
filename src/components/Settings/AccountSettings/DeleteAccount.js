@@ -12,7 +12,7 @@ import Button from '@material-ui/core/Button';
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 
-const deleteAccount = props => {
+const DeleteAccount = props => {
     const [confirmDeleteAccount, setConfirmDeleteAccount] = useState(false);
     const [accountDeletionError, setAccountDeletionError] = useState(false);
 
@@ -22,8 +22,8 @@ const deleteAccount = props => {
 
     const dispatch = useDispatch();
 
-    const authenticate = useCallback((idToken, formData) => dispatch(actions.authenticate(formData.email, formData.password, false)), []);
-    const deleteAccount = useCallback(idToken => dispatch(actions.deleteAccount(idToken)), [idToken]);
+    const authenticate = useCallback((idToken, formData) => dispatch(actions.authenticate(formData.email, formData.password, false)), [dispatch]);
+    const deleteAccount = useCallback(idToken => dispatch(actions.deleteAccount(idToken)), [dispatch]);
 
     const {t} = useTranslation();
 
@@ -85,4 +85,4 @@ const deleteAccount = props => {
     );
 };
 
-export default deleteAccount;
+export default DeleteAccount;

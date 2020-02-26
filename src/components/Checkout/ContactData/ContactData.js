@@ -17,7 +17,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 
-const contactData = props => {
+const ContactData = props => {
     const [orderForm, setOrderForm] = useState({
         name: {
             elementType: 'input',
@@ -194,4 +194,4 @@ const contactData = props => {
     );
 };
 
-export default withErrorHandler(withRouter(contactData), AxiosInstance);
+export default withErrorHandler(withRouter(ContactData), AxiosInstance);

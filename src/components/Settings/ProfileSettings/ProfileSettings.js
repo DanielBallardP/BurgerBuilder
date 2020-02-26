@@ -8,14 +8,14 @@ import classes from './ProfileSettings.css';
 import Tooltip from '@material-ui/core/Tooltip';
 import Button from '@material-ui/core/Button';
 
-const profileSettings = props => {
+const ProfileSettings = props => {
 
     const avatar = useSelector(state => state.settings.settings.profileImage);
 
     const dispatch = useDispatch();
 
-    const changeProfileImage = useCallback(profileImage => dispatch(actions.changeProfileImage(profileImage)), []);
-    const removeProfileImage = useCallback(() => dispatch(actions.removeProfileImage()), []);
+    const changeProfileImage = useCallback(profileImage => dispatch(actions.changeProfileImage(profileImage)), [dispatch]);
+    const removeProfileImage = useCallback(() => dispatch(actions.removeProfileImage()), [dispatch]);
 
     const {t} = useTranslation();
 
@@ -81,6 +81,6 @@ const profileSettings = props => {
     );
 };
 
-export default profileSettings;
+export default ProfileSettings;
 
 //                <DeleteForeverIcon onClick={removeProfileImage}/>
