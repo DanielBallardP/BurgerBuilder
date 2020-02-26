@@ -27,7 +27,7 @@ const Order = props => {
 
     const dispatch = useDispatch();
 
-    const deleteOrder = useCallback(orderId => dispatch(actions.deleteOrder(orderId, idToken)));
+    const deleteOrder = useCallback(orderId => dispatch(actions.deleteOrder(orderId, idToken)), [dispatch, idToken]);
 
     const {t} = useTranslation();
 

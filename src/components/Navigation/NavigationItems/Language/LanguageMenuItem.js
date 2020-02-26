@@ -31,7 +31,7 @@ const LanguageMenu = props => {
     dispatch(actions.changeLanguage(code));
     i18n.changeLanguage(code);
     setOpen(false);
-  }, []);
+  }, [dispatch, i18n]);
 
   const languages = {
       'en': flag_en,

@@ -52,5 +52,10 @@
     "orderDetails": "Order details",
     "proceed": "Proceed",
     "cancel": "Cancel",
-    "pc(s)": "pc(s)"
+    "pc(s)": "pc(s)",
+    "yourName": "Your name",
+    "yourStreet": "Your street",
+    "yourZipCode": "Your zip code",
+    "enterContactDetails": "Enter your contact details",
+    "orderConfirmed": "Order successfully confirmed"
 }

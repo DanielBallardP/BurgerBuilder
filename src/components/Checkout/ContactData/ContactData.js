@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {withRouter} from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+import {useTranslation} from 'react-i18next';
 
 import Spinner from '../../UI/Spinner/Spinner';
 import Input from '../../UI/Input/Input';
@@ -18,12 +19,14 @@ import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 
 const ContactData = props => {
+const {t} = useTranslation();
+
     const [orderForm, setOrderForm] = useState({
         name: {
             elementType: 'input',
             elementConfig: {
                 type: 'text',
-                placeholder: 'Your name'
+                placeholder: t('yourName', 'Your name')
             },
             value: '',
             validation: {
@@ -38,7 +41,7 @@ const ContactData = props => {
             elementType: 'input',
             elementConfig: {
                 type: 'text',
-                placeholder: 'Your street'
+                placeholder: t('yourStreet', 'Your street')
             },
             value: '',
             validation: {
@@ -53,7 +56,7 @@ const ContactData = props => {
             elementType: 'input',
             elementConfig: {
                 type: 'text',
-                placeholder: 'Your zip code'
+                placeholder: t('yourZipCode', 'Your zip code')
             },
             value: '',
             validation: {
@@ -69,7 +72,7 @@ const ContactData = props => {
             elementType: 'input',
             elementConfig: {
                 type: 'email',
-                placeholder: 'Your email'
+                placeholder: t('yourEmail', 'Your email')
             },
             value: '',
             validation: {
@@ -112,7 +115,7 @@ const ContactData = props => {
     const successMessage = (
         <Snackbar open={orderConfirmation} autoHideDuration={2000} onClose={handleClose}>
             <Alert onClose={handleClose} severity="success">
-                Order successfully confirmed
+                {t('orderConfirmed', 'Order successfully confirmed')}
             </Alert>
         </Snackbar>
     );
@@ -171,7 +174,7 @@ const ContactData = props => {
                 const formObject = orderForm[formElement];
                 return (<Input className={classes.Input} key={formElement} elementType={formObject.elementType} id="outlined-basic" variant="outlined" elementConfig={formObject.elementConfig} name={formElement} value={formObject.value} changed={event => handleChange(event, formElement)} valid={formObject.valid} validate={formObject.validation} validationError={formObject.error} touched={formObject.touched}/>);
             })}
-            <Button disableElevation className={classes.OrderButton} disabled={!orderFormValid} onClick={orderHandler} variant="contained">Confirm order</Button>
+            <Button disableElevation className={classes.OrderButton} disabled={!orderFormValid} onClick={orderHandler} variant="contained">{t('confirmOrder', 'Confirm order')}</Button>
         </form>
     );
 
@@ -182,7 +185,7 @@ const ContactData = props => {
     return (
         <div className={classes.ContactData}>
             <div className={cssClass.join(' ')}>
-                Enter your contact details
+                {t('enterContactDetails', 'Enter your contact details')}
             </div>
             <Card className={classes.Card}>
                 <CardContent>
