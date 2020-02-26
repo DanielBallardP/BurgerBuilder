@@ -52,5 +52,10 @@
     "orderDetails": "Bestellübersicht",
     "proceed": "Fortfahren",
     "cancel": "Abbrechen",
-    "pc(s)": "Stk."
+    "pc(s)": "Stk.",
+    "yourName": "Ihr Name",
+    "yourStreet": "Ihre Straße",
+    "yourZipCode": "Ihre Postleitzahl",
+    "enterContactDetails": "Geben Sie Ihre Kontaktdaten ein",
+    "orderConfirmed": "Bestellung erfolgreich bestätigt"
 }
