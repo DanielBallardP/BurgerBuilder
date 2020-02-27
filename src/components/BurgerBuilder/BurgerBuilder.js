@@ -2,6 +2,7 @@ import React, {Fragment, useState, useEffect, useCallback}from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { useLastLocation } from 'react-router-last-location';
+import { useTranslation } from 'react-i18next';
 
 import Burger from '../../components/Burger/Burger';
 import BuildControls from '../../components/Burger/BuildControls/BuildControls';
@@ -22,6 +23,8 @@ export const BurgerBuilder = props => {
     const [showOrderSummary, setShowOrderSummary] = useState(false);
 
     const [logoutMessage, setLogoutMessage] = useState(null);
+
+    const { t } = useTranslation();
 
     const history = useHistory();
     const lastLocation = useLastLocation();
@@ -78,7 +81,7 @@ export const BurgerBuilder = props => {
     const logoutMessagePopup = (
         <Snackbar open={logoutMessagePopup !== null} autoHideDuration={2000} onClose={handleClose}>
             <Alert onClose={handleClose} severity="success">
-                You have been successfully logged out.
+                {t('youHaveBeenLoggedOut', 'You have been successfully logged out')}
             </Alert>
         </Snackbar>
     );
