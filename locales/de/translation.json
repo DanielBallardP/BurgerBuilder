@@ -57,5 +57,6 @@
     "yourStreet": "Ihre Straße",
     "yourZipCode": "Ihre Postleitzahl",
     "enterContactDetails": "Geben Sie Ihre Kontaktdaten ein",
-    "orderConfirmed": "Bestellung erfolgreich bestätigt"
+    "orderConfirmed": "Bestellung erfolgreich bestätigt",
+    "youHaveBeenLoggedOut": "Sie wurden erfolgreich ausgeloggt"
 }
