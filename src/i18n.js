@@ -15,7 +15,7 @@ i18n
         escapeValue: false,
     },
     backend: {
-        loadPath: '/BurgerBuilder/locales/{{lng}}/{{ns}}.json'
+        loadPath: '/locales/{{lng}}/{{ns}}.json'
     },
     react: {
         useSuspense: true
